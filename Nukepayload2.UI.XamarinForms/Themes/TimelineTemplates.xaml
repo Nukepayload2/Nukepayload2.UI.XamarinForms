@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Nukepayload2.UI.Xaml"
+             x:Class="Nukepayload2.UI.Xaml.TimelineTemplates">
+    <local:TimelineIconImageConverter x:Key="TimelineIconImageConverter"/>
+    <local:TimelineIconTextConverter x:Key="TimelineIconTextConverter"/>
+    <local:EnumItemsConverter x:Key="EnumItemsConverter"/>
+    <DataTemplate x:Key="TimelineActionViewDataTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="ActionIcon" Margin="4" WidthRequest="32" HeightRequest="32"
+                   Source="{Binding Action,Converter={StaticResource TimelineIconImageConverter}}"/>
+            <Label Grid.Column="1"
+                   VerticalOptions="Center"
+                   Text="{Binding Description}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineActionIconViewDataTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image Margin="4" WidthRequest="32" HeightRequest="32"
+                   Source="{Binding Converter={StaticResource TimelineIconImageConverter}}"/>
+            <Label Grid.Column="1"
+                   VerticalOptions="Center"
+                   Text="{Binding Converter={StaticResource TimelineIconTextConverter}}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineDateViewDataTemplate">
+        <Label FontSize="14" FontAttributes="Bold" HorizontalOptions="Center" Text="{Binding Date,StringFormat='{0:yyyy-MM-dd}'}" Margin="4"/>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineTimeViewDataTemplate">
+        <Label FontSize="14" HorizontalOptions="Start" Margin="4" Text="{Binding Time,StringFormat='{0:hh\\\:mm}'}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineActionEditorDataTemplate">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Label Margin="4">动作</Label>
+            <local:ComboBox Margin="4"
+                            Grid.Column="1"
+                            ItemsSource="{Binding Action,Converter={StaticResource EnumItemsConverter}}"
+                            SelectedItem="{Binding Action}"
+                            ItemTemplate="{StaticResource TimelineActionIconViewDataTemplate}"/>
+            <Label Grid.Row="1" Margin="4">描述</Label>
+            <Entry Margin="4" Grid.Row="1"
+                   Grid.Column="1"
+                   Text="{Binding Description}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineActionEditDataTemplate">
+        <local:EditorControl InnerContent="{Binding}"
+                             ViewContentTemplate="{StaticResource TimelineActionViewDataTemplate}"
+                             EditContentTemplate="{StaticResource TimelineActionEditorDataTemplate}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineDateEditorDataTemplate">
+        <DatePicker Date="{Binding Date}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineDateEditDataTemplate">
+        <local:EditorControl InnerContent="{Binding}"
+                             ViewContentTemplate="{StaticResource TimelineDateViewDataTemplate}"
+                             EditContentTemplate="{StaticResource TimelineDateEditorDataTemplate}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineTimeEditorDataTemplate">
+        <TimePicker Time="{Binding Time}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="TimelineTimeEditDataTemplate">
+        <local:EditorControl InnerContent="{Binding}"
+                             ViewContentTemplate="{StaticResource TimelineTimeViewDataTemplate}"
+                             EditContentTemplate="{StaticResource TimelineTimeEditorDataTemplate}"/>
+    </DataTemplate>
+</ResourceDictionary>

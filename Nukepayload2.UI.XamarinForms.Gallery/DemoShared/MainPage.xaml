@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Nukepayload2.UI.XamarinForms.Gallery"
+             xmlns:controls="clr-namespace:Nukepayload2.UI.Xaml;assembly=Nukepayload2.UI.XamarinForms"
+             x:Class="Nukepayload2.UI.XamarinForms.Gallery.MainPage">
+    <Grid>
+        <ScrollView Margin="8">
+            <StackLayout>
+                <Label FontSize="24">Expander</Label>
+                <Label>Expander 控件可以折叠大块的内容。常用于分组。</Label>
+                <controls:Expander Header="标题">
+                    <controls:Expander.InnerContent>
+                        <StackLayout>
+                            <Label>这是内容</Label>
+                            <Button Text="内容里面的按钮"></Button>
+                        </StackLayout>
+                    </controls:Expander.InnerContent>
+                </controls:Expander>
+                <controls:Expander Header="嵌套两层">
+                    <controls:Expander.InnerContent>
+                        <StackLayout>
+                            <Label Text="下面编辑的文字在这显示"/>
+                            <Label Text="{Binding DemoText}"/>
+                            <controls:Expander Header="这是里面那一层">
+                                <controls:Expander.InnerContent>
+                                    <StackLayout>
+                                        <Label Text="下面编辑的文字也会在这显示"/>
+                                        <Label Text="{Binding DemoText}"/>
+                                    </StackLayout>
+                                </controls:Expander.InnerContent>
+                            </controls:Expander>
+                        </StackLayout>
+                    </controls:Expander.InnerContent>
+                </controls:Expander>
+                <Label FontSize="24">EditTextBox</Label>
+                <Label>使用编辑按钮切换文字的编辑状态。</Label>
+                <Label FontAttributes="Bold">多行文本</Label>
+                <Switch x:Name="EnableMultilineSwitch"/>
+                <controls:EditTextBox Text="{Binding DemoText, Mode=TwoWay}" 
+                                  AcceptsReturn="{Binding Path=IsToggled,Source={x:Reference EnableMultilineSwitch}}" 
+                                  x:Name="EditBoxDemo"/>
+                <Label FontSize="24">ItemsControl</Label>
+                <Label>使用模板重复显示同类型的内容。</Label>
+                <Button x:Name="BtnRandomContent" Text="添加随机的项目"/>
+                <controls:ItemsControl x:Name="LstItems">
+                    <controls:ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout>
+                                <Label Text="{Binding Header}" FontAttributes="Bold"/>
+                                <Label Text="{Binding Text}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </controls:ItemsControl.ItemTemplate>
+                </controls:ItemsControl>
+                <Label FontSize="24">CheckBox</Label>
+                <Label>使用模板呈现的复选框。</Label>
+                <controls:CheckBox InnerContent="文字在这里显示"/>
+                <Label FontSize="24">ComboBox</Label>
+                <Label>使用模板呈现的下拉列表。</Label>
+                <BoxView HeightRequest="24"
+                         Color="{Binding SelectedColor.Color}"/>
+                <controls:ComboBox SelectedItem="{Binding SelectedColor}"
+                                   ItemsSource="{Binding Colors}"
+                                   HorizontalOptions="Start">
+                    <controls:ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackLayout Orientation="Horizontal">
+                                <BoxView WidthRequest="32" HeightRequest="16"
+                                         VerticalOptions="Center" Margin="4"
+                                         Color="{Binding Color}"/>
+                                <Label Margin="4" VerticalOptions="Center" Text="{Binding Name}"/>
+                            </StackLayout>
+                        </DataTemplate>
+                    </controls:ComboBox.ItemTemplate>
+                </controls:ComboBox>
+                <Label FontSize="24">TimelineEditor</Label>
+                <Label>编辑一个带有默认类型日程安排的时间线。由 ContentControl, ItemsControl, EditControl 和 ComboBox 组合而成。</Label>
+                <controls:TimelineEditor x:Name="CtlTimeline" Header="示例时间线"
+                                         SelectedItem="{Binding SelectedTimelineItem}"
+                                         ItemsSource="{Binding TimelineList}"/>
+                <Label FontSize="24">TimelineView</Label>
+                <Label>TimelineEditor 编辑的结果在 TimelineView 显示。</Label>
+                <controls:TimelineView Header="时间线预览"
+                                       ItemsSource="{Binding TimelineList}"/>
+            </StackLayout>
+        </ScrollView>
+        <controls:FlyoutContainer/>
+    </Grid>
+</ContentPage>

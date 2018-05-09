@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Nukepayload2.UI.Xaml"
+             x:Class="Nukepayload2.UI.Xaml.Expander">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="GrdBackground" BackgroundColor="#1F000000">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.GestureRecognizers>
+                <TapGestureRecognizer x:Name="HeaderHitTest"/>
+            </Grid.GestureRecognizers>
+            <Label x:Name="Arrow" FontFamily="segmdl2.ttf#Segoe MDL2 Assets" Text="&#xE0AD;" Margin="8"/>
+            <Label x:Name="LblHeader" Grid.Column="1" Margin="4" VerticalOptions="Center"/>
+        </Grid>
+        <ContentView x:Name="CtlContent" IsVisible="False" Grid.Row="1"/>
+    </Grid>
+</ContentView>

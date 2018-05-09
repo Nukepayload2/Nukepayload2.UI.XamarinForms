@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Nukepayload2.UI.Xaml"
+             x:Class="Nukepayload2.UI.Xaml.EditorControl">
+    <ContentView.Resources>
+        <ResourceDictionary>
+            <local:NotConverter x:Key="NotConverter"/>
+        </ResourceDictionary>
+    </ContentView.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <local:ContentControl x:Name="ViewPart" x:FieldModifier="protected"/>
+        <local:ContentControl x:Name="EditPart" x:FieldModifier="protected"
+                              IsVisible="False"/>
+        <Button x:Name="EditToggleButton" FontFamily="segmdl2.ttf#Segoe MDL2 Assets" Text="&#xE104;"
+                Grid.Column="1" VerticalOptions="Start" WidthRequest="48"/>
+        <Button x:Name="SaveToggleButton" FontFamily="segmdl2.ttf#Segoe MDL2 Assets" Text="&#xE105;"
+                Grid.Column="1" VerticalOptions="Start"
+                IsVisible="False" WidthRequest="48"/>
+    </Grid>
+</ContentView>

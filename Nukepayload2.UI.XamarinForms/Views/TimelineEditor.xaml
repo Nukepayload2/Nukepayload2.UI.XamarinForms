@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Nukepayload2.UI.Xaml"
+             x:Class="Nukepayload2.UI.Xaml.TimelineEditor">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label x:Name="LblHeader" Margin="8,4" />
+        <ScrollView Grid.Row="1" Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal">
+                <StackLayout.Resources>
+                    <ResourceDictionary>
+                        <Style TargetType="Button">
+                            <Style.Setters>
+                                <Setter Property="FontFamily" Value="segmdl2.ttf#Segoe MDL2 Assets"/>
+                            </Style.Setters>
+                        </Style>
+                    </ResourceDictionary>
+                </StackLayout.Resources>
+                <Button x:Name="BtnAddDate" WidthRequest="48" Text="&#xE163;"/>
+                <Button x:Name="BtnAddTime" WidthRequest="48" Text="&#xE121;"/>
+                <Button x:Name="BtnAddAction" WidthRequest="48" Text="&#xE945;"/>
+                <Button x:Name="BtnDelete" WidthRequest="48" Text="&#xE107;"/>
+                <Button x:Name="BtnUndo" WidthRequest="48" Text="&#xE10E;" />
+                <Button x:Name="BtnRedo" WidthRequest="48" Text="&#xE10D;"/>
+                <Button x:Name="BtnMoveUp" WidthRequest="48" Text="&#xE110;"/>
+                <Button x:Name="BtnMoveDown" WidthRequest="48" Text="&#xE1FD;"/>
+            </StackLayout>
+        </ScrollView>
+        <local:ListBox x:Name="LstItems"
+                       Margin="4"
+                       Grid.Row="2"/>
+    </Grid>
+</ContentView>

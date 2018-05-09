@@ -1,0 +1,76 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>Nukepayload2.UI.Xaml</RootNamespace>
+    <AssemblyName>Nukepayload2.UI.XamarinForms</AssemblyName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\BeginCheck.png" />
+    <None Remove="Assets\ChangeLocation.png" />
+    <None Remove="Assets\CloseConference.png" />
+    <None Remove="Assets\ConferenceAction.png" />
+    <None Remove="Assets\Dinner.png" />
+    <None Remove="Assets\EndCheck.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\BeginCheck.png" />
+    <EmbeddedResource Include="Assets\ChangeLocation.png" />
+    <EmbeddedResource Include="Assets\CloseConference.png" />
+    <EmbeddedResource Include="Assets\ConferenceAction.png" />
+    <EmbeddedResource Include="Assets\Dinner.png" />
+    <EmbeddedResource Include="Assets\EndCheck.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.ComponentModel.Annotations" Version="4.4.1" />
+    <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Import Include="Xamarin.Forms" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="Xamarin.Forms.Core">
+      <HintPath>Xamarin.Forms.Core</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="GeneratedForXaml.vb">
+      <DependentUpon>GeneratedForXaml.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="My Project\MyEmbeddedResources.vb">
+      <DependentUpon>MyEmbeddedResources.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Update="Themes\ChatViewTemples.xaml.vb">
+      <DependentUpon>ChatViewTemples.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\HyperlinkButton.xaml.vb">
+      <DependentUpon>HyperlinkButton.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="GeneratedForXaml.tt">
+      <LastGenOutput>GeneratedForXaml.vb</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="My Project\MyEmbeddedResources.tt">
+      <LastGenOutput>MyEmbeddedResources.vb</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
+</Project>

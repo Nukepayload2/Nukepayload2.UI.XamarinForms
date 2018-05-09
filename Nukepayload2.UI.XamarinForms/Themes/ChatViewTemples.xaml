@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                    xmlns:local="clr-namespace:Nukepayload2.UI.Xaml"
+                    x:Class="Nukepayload2.UI.Xaml.ChatViewTemples">
+    <local:SegoeMdl2AssetsConverter x:Key="SegoeMdl2AssetsConverter"/>
+    <local:DateTimeStringConverter x:Key="DateTimeStringConverter"/>
+    <local:ChatItemDataTemplateSelector x:Key="ChatItemDataTemplateSelector"/>
+    <local:ChatItemContentTemplateSelector x:Key="ChatItemContentTemplateSelector"/>
+    <local:ImageLoader x:Key="ImageLoader"/>
+    <local:CheckColorConverter x:Key="CheckColorConverter"/>
+    <local:CheckTextConverter x:Key="CheckTextConverter"/>
+    <DataTemplate x:Key="HtmlContentMessageTemplate">
+        <StackLayout>
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding Path=NavigateCommand}"
+                                      CommandParameter="{Binding Path=NavigateUri}"/>
+            </StackLayout.GestureRecognizers>
+            <Label Text="{Binding Path=Title}"/>
+            <Image Source="{Binding Path=ImageUri}"/>
+        </StackLayout>
+    </DataTemplate>
+    <DataTemplate x:Key="HyperlinkMessageTemplate">
+        <!-- 这个必须用用户控件，CodeBehind 实现打开浏览器。-->
+        <local:HyperlinkButton Text="{Binding Path=Text}"
+                               NavigateUri="{Binding Path=NavigateUri}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="ImageMessageTemplate">
+        <Image Source="{Binding Path=SourceUri}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="TextMessageTemplate">
+        <Label Text="{Binding Path=Text}"/>
+    </DataTemplate>
+    <DataTemplate x:Key="InviteMessageTemplate">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="{Binding Source={x:Reference LayoutRoot},Path=Text}"/>
+            <StackLayout Grid.Row="1" Orientation="Horizontal" HorizontalOptions="End">
+                <Button Margin="2" Text="接受"
+                    Command="{Binding Path=Accept}"/>
+                <Button Margin="2" Text="拒绝"
+                    Command="{Binding Path=Decline}"/>
+            </StackLayout>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="MessageGroupByDateDataTemplate">
+        <Grid HorizontalOptions="Fill">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Text="{Binding Key, Converter={StaticResource DateTimeStringConverter}}"
+                   TextColor="Gray"
+                   HorizontalOptions="Center"/>
+            <local:ItemsControl ItemsSource="{Binding Values}" 
+                                Grid.Row="1"
+                                ItemTemplateSelector="{StaticResource ChatItemDataTemplateSelector}"/>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="ChatButtonDataTemplate">
+        <Button Command="{Binding Command}" WidthRequest="48"
+                Text="{Binding Symbol, Converter={StaticResource SegoeMdl2AssetsConverter}}"
+                FontFamily="segmdl2.ttf#Segoe MDL2 Assets"/>
+    </DataTemplate>
+    <DataTemplate x:Key="ListViewChatItemLeftDataTemplate">
+        <Grid Margin="0,4" HorizontalOptions="Fill">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackLayout>
+                <Image Source="{Binding Icon, Converter={StaticResource ImageLoader}}" VerticalOptions="Start"
+                       WidthRequest="48" HeightRequest="48"/>
+                <Label BackgroundColor="{Binding IsCheckedInParentConference, Converter={StaticResource CheckColorConverter}}"
+                       Text="{Binding IsCheckedInParentConference, Converter={StaticResource CheckTextConverter}}"
+                       TextColor="White"/>
+            </StackLayout>
+            <StackLayout Grid.Column="1"
+                         Margin="8,0"
+                         VerticalOptions="End"
+                         HorizontalOptions="Start" WidthRequest="220">
+                <Label TextColor="Gray" Text="{Binding Header}" HorizontalOptions="Start"/>
+                <Frame OutlineColor="DodgerBlue" HorizontalOptions="Start">
+                    <local:ContentControl InnerContent="{Binding}"
+                                          ContentTemplateSelector="{StaticResource ChatItemContentTemplateSelector}"/>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </DataTemplate>
+    <DataTemplate x:Key="ListViewChatItemRightDataTemplate">
+        <Grid Margin="0,4" HorizontalOptions="Fill">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="1" WidthRequest="48" HeightRequest="48" VerticalOptions="Start"
+                   Source="{Binding Icon, Converter={StaticResource ImageLoader}}"/>
+            <StackLayout Margin="8,0" 
+                         VerticalOptions="End"
+                         HorizontalOptions="End" 
+                         WidthRequest="220">
+                <Label TextColor="Gray" Text="{Binding Header}" HorizontalOptions="End"/>
+                <Frame OutlineColor="DodgerBlue" HorizontalOptions="End">
+                    <local:ContentControl InnerContent="{Binding}"
+                                          ContentTemplateSelector="{StaticResource ChatItemContentTemplateSelector}"/>
+                </Frame>
+            </StackLayout>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

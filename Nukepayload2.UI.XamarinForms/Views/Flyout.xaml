@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:FlyoutBase xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:local="clr-namespace:Nukepayload2.UI.Xaml"
+                  x:Class="Nukepayload2.UI.Xaml.Flyout">
+    <Frame Padding="4" BackgroundColor="WhiteSmoke" OutlineColor="DodgerBlue" CornerRadius="0">
+        <ContentView x:Name="CtlInner"/>
+    </Frame>
+</local:FlyoutBase>

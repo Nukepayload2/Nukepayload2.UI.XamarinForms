@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<primitives:Selector xmlns="http://xamarin.com/schemas/2014/forms"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                     xmlns:local="clr-namespace:Nukepayload2.UI.Xaml"
+                     xmlns:primitives="clr-namespace:Nukepayload2.UI.Xaml.Primitives"
+                     HorizontalOptions="Start"
+                     x:Class="Nukepayload2.UI.Xaml.ComboBox">
+    <local:FlyoutBase.AttachedFlyout>
+        <local:Flyout x:Name="FlyItemPicker" Margin="32">
+            <local:Flyout.InnerContent>
+                <!--备选列表。必须做成浮出的，否则安卓上不会滚动。-->
+                <ScrollView x:Name="ScrFlyout">
+                    <local:ItemsControl x:Name="LstFlyout" HorizontalOptions="Fill">
+                        <local:ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <local:ComboBoxItem HorizontalOptions="Fill"/>
+                            </DataTemplate>
+                        </local:ItemsControl.ItemTemplate>
+                    </local:ItemsControl>
+                </ScrollView>
+            </local:Flyout.InnerContent>
+        </local:Flyout>
+    </local:FlyoutBase.AttachedFlyout>
+    <Frame BackgroundColor="WhiteSmoke" OutlineColor="LightGray" Padding="4"
+           CornerRadius="0" HorizontalOptions="Start">
+        <Frame.GestureRecognizers>
+            <TapGestureRecognizer x:Name="CtlButtonPart"/>
+        </Frame.GestureRecognizers>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <!--被选中的项目-->
+            <local:ContentControl x:Name="ItmContent" Margin="4" HorizontalOptions="Start"/>
+            <!--三角箭头-->
+            <Label x:Name="LblArrow" Text="&#xE011;" FontFamily="segmdl2.ttf#Segoe MDL2 Assets" HorizontalOptions="Start"
+                   VerticalOptions="Center" Grid.Column="1" FontSize="12" Margin="4"/>
+        </Grid>
+    </Frame>
+</primitives:Selector>
