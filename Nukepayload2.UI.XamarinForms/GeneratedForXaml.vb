@@ -1,11 +1,22 @@
 ﻿Option Strict On
-Imports System.ComponentModel
-Imports Xamarin.Forms
-Imports Xamarin.Forms.Xaml
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.ChatViewTemples.xaml", "Themes\ChatViewTemples.xaml", GetType(Global.Nukepayload2.UI.Xaml.ChatViewTemples))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.DefaultContentTemplates.xaml", "Themes\DefaultContentTemplates.xaml", GetType(Global.Nukepayload2.UI.Xaml.DefaultContentTemplates))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.TimelineTemplates.xaml", "Themes\TimelineTemplates.xaml", GetType(Global.Nukepayload2.UI.Xaml.TimelineTemplates))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.ChatView.xaml", "Views\ChatView.xaml", GetType(Global.Nukepayload2.UI.Xaml.ChatView))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.CheckBox.xaml", "Views\CheckBox.xaml", GetType(Global.Nukepayload2.UI.Xaml.CheckBox))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.ComboBox.xaml", "Views\ComboBox.xaml", GetType(Global.Nukepayload2.UI.Xaml.ComboBox))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.EditorControl.xaml", "Views\EditorControl.xaml", GetType(Global.Nukepayload2.UI.Xaml.EditorControl))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.EmbeddedWebViewPage.xaml", "Views\EmbeddedWebViewPage.xaml", GetType(Global.Nukepayload2.UI.Xaml.Views.EmbeddedWebViewPage))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.Expander.xaml", "Views\Expander.xaml", GetType(Global.Nukepayload2.UI.Xaml.Expander))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.Flyout.xaml", "Views\Flyout.xaml", GetType(Global.Nukepayload2.UI.Xaml.Flyout))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.FlyoutContainer.xaml", "Views\FlyoutContainer.xaml", GetType(Global.Nukepayload2.UI.Xaml.FlyoutContainer))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.HyperlinkButton.xaml", "Views\HyperlinkButton.xaml", GetType(Global.Nukepayload2.UI.Xaml.HyperlinkButton))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.TimelineEditor.xaml", "Views\TimelineEditor.xaml", GetType(Global.Nukepayload2.UI.Xaml.TimelineEditor))>
+<Assembly: Global.Xamarin.Forms.Xaml.XamlResourceId("Nukepayload2.UI.Xaml.TimelineView.xaml", "Views\TimelineView.xaml", GetType(Global.Nukepayload2.UI.Xaml.TimelineView))>
 
 
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Themes\ChatViewTemples.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Themes\ChatViewTemples.xaml")>
 Partial Public Class ChatViewTemples
     Inherits Global.Xamarin.Forms.ResourceDictionary
 
@@ -183,15 +194,15 @@ Partial Public Class ChatViewTemples
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(ChatViewTemples))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(ChatViewTemples))
 
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Themes\DefaultContentTemplates.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Themes\DefaultContentTemplates.xaml")>
 Partial Public Class DefaultContentTemplates
     Inherits Global.Xamarin.Forms.ResourceDictionary
 
@@ -219,15 +230,15 @@ Partial Public Class DefaultContentTemplates
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(DefaultContentTemplates))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(DefaultContentTemplates))
 
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Themes\TimelineTemplates.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Themes\TimelineTemplates.xaml")>
 Partial Public Class TimelineTemplates
     Inherits Global.Xamarin.Forms.ResourceDictionary
 
@@ -375,15 +386,15 @@ Partial Public Class TimelineTemplates
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(TimelineTemplates))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(TimelineTemplates))
 
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\ChatView.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\ChatView.xaml")>
 Partial Public Class ChatView
     Inherits Global.Xamarin.Forms.ContentView
 
@@ -402,15 +413,15 @@ Partial Public Class ChatView
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(ChatView))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(ChatView))
 
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\CheckBox.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\CheckBox.xaml")>
 Partial Public Class CheckBox
     Inherits Global.Xamarin.Forms.ContentView
 Private  CheckBoxInteractiveArea As Global.Xamarin.Forms.TapGestureRecognizer
@@ -444,20 +455,20 @@ CtlContentWithEvents = CtlContent
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(CheckBox))
-CheckBoxInteractiveArea = Content.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(NameOf(CheckBoxInteractiveArea))
-CtlBlackRectangle = Content.FindByName(Of Global.Xamarin.Forms.BoxView)(NameOf(CtlBlackRectangle))
-CtlWhiteRectangle = Content.FindByName(Of Global.Xamarin.Forms.BoxView)(NameOf(CtlWhiteRectangle))
-CtlBlueRectangle = Content.FindByName(Of Global.Xamarin.Forms.BoxView)(NameOf(CtlBlueRectangle))
-LblChecked = Content.FindByName(Of Global.Xamarin.Forms.Label)(NameOf(LblChecked))
-CtlContent = Content.FindByName(Of Global.Nukepayload2.UI.Xaml.ContentControl)(NameOf(CtlContent))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(CheckBox))
+CheckBoxInteractiveArea = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(Me, NameOf(CheckBoxInteractiveArea))
+CtlBlackRectangle = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.BoxView)(Me, NameOf(CtlBlackRectangle))
+CtlWhiteRectangle = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.BoxView)(Me, NameOf(CtlWhiteRectangle))
+CtlBlueRectangle = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.BoxView)(Me, NameOf(CtlBlueRectangle))
+LblChecked = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Label)(Me, NameOf(LblChecked))
+CtlContent = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Nukepayload2.UI.Xaml.ContentControl)(Me, NameOf(CtlContent))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\ComboBox.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\ComboBox.xaml")>
 Partial Public Class ComboBox
     Inherits Global.Nukepayload2.UI.Xaml.Primitives.Selector
 Private  FlyItemPicker As Global.Nukepayload2.UI.Xaml.Flyout
@@ -491,20 +502,20 @@ LblArrowWithEvents = LblArrow
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(ComboBox))
-FlyItemPicker = Content.FindByName(Of Global.Nukepayload2.UI.Xaml.Flyout)(NameOf(FlyItemPicker))
-ScrFlyout = Content.FindByName(Of Global.Xamarin.Forms.ScrollView)(NameOf(ScrFlyout))
-LstFlyout = Content.FindByName(Of Global.Nukepayload2.UI.Xaml.ItemsControl)(NameOf(LstFlyout))
-CtlButtonPart = Content.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(NameOf(CtlButtonPart))
-ItmContent = Content.FindByName(Of Global.Nukepayload2.UI.Xaml.ContentControl)(NameOf(ItmContent))
-LblArrow = Content.FindByName(Of Global.Xamarin.Forms.Label)(NameOf(LblArrow))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(ComboBox))
+FlyItemPicker = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Nukepayload2.UI.Xaml.Flyout)(Me, NameOf(FlyItemPicker))
+ScrFlyout = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.ScrollView)(Me, NameOf(ScrFlyout))
+LstFlyout = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Nukepayload2.UI.Xaml.ItemsControl)(Me, NameOf(LstFlyout))
+CtlButtonPart = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(Me, NameOf(CtlButtonPart))
+ItmContent = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Nukepayload2.UI.Xaml.ContentControl)(Me, NameOf(ItmContent))
+LblArrow = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Label)(Me, NameOf(LblArrow))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\EditorControl.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\EditorControl.xaml")>
 Partial Public Class EditorControl
     Inherits Global.Xamarin.Forms.ContentView
 Protected  ViewPart As Global.Nukepayload2.UI.Xaml.ContentControl
@@ -532,18 +543,18 @@ SaveToggleButtonWithEvents = SaveToggleButton
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(EditorControl))
-ViewPart = Content.FindByName(Of Global.Nukepayload2.UI.Xaml.ContentControl)(NameOf(ViewPart))
-EditPart = Content.FindByName(Of Global.Nukepayload2.UI.Xaml.ContentControl)(NameOf(EditPart))
-EditToggleButton = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(EditToggleButton))
-SaveToggleButton = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(SaveToggleButton))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(EditorControl))
+ViewPart = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Nukepayload2.UI.Xaml.ContentControl)(Me, NameOf(ViewPart))
+EditPart = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Nukepayload2.UI.Xaml.ContentControl)(Me, NameOf(EditPart))
+EditToggleButton = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(EditToggleButton))
+SaveToggleButton = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(SaveToggleButton))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml.Views
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\EmbeddedWebViewPage.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\EmbeddedWebViewPage.xaml")>
 Partial Public Class EmbeddedWebViewPage
     Inherits Global.Xamarin.Forms.ContentPage
 Private  WebBrowser As Global.Xamarin.Forms.WebView
@@ -562,15 +573,15 @@ WebBrowserWithEvents = WebBrowser
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(EmbeddedWebViewPage))
-WebBrowser = Content.FindByName(Of Global.Xamarin.Forms.WebView)(NameOf(WebBrowser))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(EmbeddedWebViewPage))
+WebBrowser = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.WebView)(Me, NameOf(WebBrowser))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\Expander.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\Expander.xaml")>
 Partial Public Class Expander
     Inherits Global.Xamarin.Forms.ContentView
 Private  GrdBackground As Global.Xamarin.Forms.Grid
@@ -601,19 +612,19 @@ CtlContentWithEvents = CtlContent
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(Expander))
-GrdBackground = Content.FindByName(Of Global.Xamarin.Forms.Grid)(NameOf(GrdBackground))
-HeaderHitTest = Content.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(NameOf(HeaderHitTest))
-Arrow = Content.FindByName(Of Global.Xamarin.Forms.Label)(NameOf(Arrow))
-LblHeader = Content.FindByName(Of Global.Xamarin.Forms.Label)(NameOf(LblHeader))
-CtlContent = Content.FindByName(Of Global.Xamarin.Forms.ContentView)(NameOf(CtlContent))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(Expander))
+GrdBackground = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Grid)(Me, NameOf(GrdBackground))
+HeaderHitTest = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(Me, NameOf(HeaderHitTest))
+Arrow = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Label)(Me, NameOf(Arrow))
+LblHeader = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Label)(Me, NameOf(LblHeader))
+CtlContent = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.ContentView)(Me, NameOf(CtlContent))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\Flyout.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\Flyout.xaml")>
 Partial Public Class Flyout
     Inherits Global.Nukepayload2.UI.Xaml.FlyoutBase
 Private  CtlInner As Global.Xamarin.Forms.ContentView
@@ -632,15 +643,15 @@ CtlInnerWithEvents = CtlInner
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(Flyout))
-CtlInner = Content.FindByName(Of Global.Xamarin.Forms.ContentView)(NameOf(CtlInner))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(Flyout))
+CtlInner = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.ContentView)(Me, NameOf(CtlInner))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\FlyoutContainer.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\FlyoutContainer.xaml")>
 Partial Public Class FlyoutContainer
     Inherits Global.Xamarin.Forms.ContentView
 Private  GrdRoot As Global.Xamarin.Forms.Grid
@@ -662,16 +673,16 @@ BackgroundInputWithEvents = BackgroundInput
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(FlyoutContainer))
-GrdRoot = Content.FindByName(Of Global.Xamarin.Forms.Grid)(NameOf(GrdRoot))
-BackgroundInput = Content.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(NameOf(BackgroundInput))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(FlyoutContainer))
+GrdRoot = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Grid)(Me, NameOf(GrdRoot))
+BackgroundInput = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(Me, NameOf(BackgroundInput))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\HyperlinkButton.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\HyperlinkButton.xaml")>
 Partial Public Class HyperlinkButton
     Inherits Global.Xamarin.Forms.ContentView
 Private  TblLink As Global.Xamarin.Forms.TapGestureRecognizer
@@ -690,15 +701,15 @@ TblLinkWithEvents = TblLink
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(HyperlinkButton))
-TblLink = Content.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(NameOf(TblLink))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(HyperlinkButton))
+TblLink = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.TapGestureRecognizer)(Me, NameOf(TblLink))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\TimelineEditor.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\TimelineEditor.xaml")>
 Partial Public Class TimelineEditor
     Inherits Global.Xamarin.Forms.ContentView
 Private  LblHeader As Global.Xamarin.Forms.Label
@@ -744,24 +755,24 @@ LstItemsWithEvents = LstItems
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(TimelineEditor))
-LblHeader = Content.FindByName(Of Global.Xamarin.Forms.Label)(NameOf(LblHeader))
-BtnAddDate = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(BtnAddDate))
-BtnAddTime = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(BtnAddTime))
-BtnAddAction = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(BtnAddAction))
-BtnDelete = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(BtnDelete))
-BtnUndo = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(BtnUndo))
-BtnRedo = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(BtnRedo))
-BtnMoveUp = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(BtnMoveUp))
-BtnMoveDown = Content.FindByName(Of Global.Xamarin.Forms.Button)(NameOf(BtnMoveDown))
-LstItems = Content.FindByName(Of Global.Nukepayload2.UI.Xaml.ListBox)(NameOf(LstItems))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(TimelineEditor))
+LblHeader = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Label)(Me, NameOf(LblHeader))
+BtnAddDate = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(BtnAddDate))
+BtnAddTime = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(BtnAddTime))
+BtnAddAction = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(BtnAddAction))
+BtnDelete = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(BtnDelete))
+BtnUndo = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(BtnUndo))
+BtnRedo = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(BtnRedo))
+BtnMoveUp = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(BtnMoveUp))
+BtnMoveDown = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Xamarin.Forms.Button)(Me, NameOf(BtnMoveDown))
+LstItems = Global.Xamarin.Forms.NameScopeExtensions.FindByName(Of Global.Nukepayload2.UI.Xaml.ListBox)(Me, NameOf(LstItems))
     End Sub
 End Class
 End Namespace
 Namespace Global.Nukepayload2.UI.Xaml
-<Global.Xamarin.Forms.Xaml.XamlFilePath("G:\vs2017\Nukepayload2.UI.XamarinForms\Nukepayload2.UI.XamarinForms\Views\TimelineView.xaml")>
+<Global.Xamarin.Forms.Xaml.XamlFilePath("Views\TimelineView.xaml")>
 Partial Public Class TimelineView
     Inherits Global.Xamarin.Forms.ContentView
 
@@ -780,9 +791,9 @@ Partial Public Class TimelineView
 
     End Sub
 
-    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "0.0.0.0")>
+    <Global.System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")>
     Private Sub InitializeComponent()
-        Extensions.LoadFromXaml(Me, GetType(TimelineView))
+        Global.Xamarin.Forms.Xaml.Extensions.LoadFromXaml(Me, GetType(TimelineView))
 
     End Sub
 End Class
